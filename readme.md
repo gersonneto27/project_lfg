@@ -1,4 +1,4 @@
-Funcionalidades
+- Funcionalidades
 Funcionalidade 1: App para Solicitação de Propostas e Avaliação das mesmas.
 ...
 Instalação
