@@ -22,9 +22,9 @@ CORS_ALLOWED_ORINGINS = [
     'http://localhost',
     'https://127.0.0.1',
     'http://0.0.0.0',
-    'http://localhost:3000',
-    'http://127.0.0.1:3000'
-    'http://0.0.0.0:3000'
+    'http://localhost:8080',
+    'http://127.0.0.1:8080'
+    'http://0.0.0.0:8080'
 ]
 # Application definition
 
