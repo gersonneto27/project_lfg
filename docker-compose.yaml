@@ -1,0 +1,57 @@
+version: '3'
+services:
+  backend:
+    container_name: backend
+    build:
+      context: /var/project_lfg/backend
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    depends_on:
+      - database
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+    volumes:
+      - /var/project_lfg/backend:/app/backend
+      - /var/project_lfg/backend/static:/app/backend/static
+    command: python manage.py runserver 0.0.0.0:8000
+
+  frontend:
+    container_name: frontend
+    build:  
+      context: /var/project_lfg/frontend/
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+    volumes:
+      - /var/project_lfg/frontend/:/app/frontend/
+  
+  redis:
+    container_name: redis
+    image: redis:latest
+  celery:
+    container_name: celery
+    build:
+      context: /var/project_lfg/backend
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    depends_on:
+      - database
+      - redis
+
+  database:
+    container_name: postgres
+    image: postgres
+    restart: unless-stopped
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=lfg_db_2
+    ports:
+      - 5432:5432
+volumes:
+  pgdata:

@@ -1,0 +1,73 @@
+# Arquivos gerados pelo Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+# Ambiente virtual
+venv/
+env/
+
+# Arquivos de mídia
+media/
+
+# Arquivos estáticos
+staticfiles/
+
+# Arquivos de configuração
+.env
+
+# Arquivos de dependências gerados pelo pip
+pip-log.txt
+
+# Arquivos de banco de dados
+db.sqlite3
+
+# Arquivos de testes
+.coverage
+htmlcov/
+
+# Outros arquivos e pastas gerados durante o desenvolvimento
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos gerados durante a construção do projeto
+/node_modules/
+/public/
+
+# Arquivos de configuração do ambiente de desenvolvimento
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependências do gerenciador de pacotes
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# Dependências geradas pelo Yarn
+yarn.lock
+
+# Arquivos gerados pelo Vue CLI
+/vue.config.js
+
+# Arquivos gerados durante os testes
+/coverage/
+
+# Editorconfig
+.editorconfig
+
+# Arquivos e pastas específicos do Visual Studio Code
+.vscode/
+*.code-workspace
