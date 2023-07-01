@@ -15,9 +15,6 @@ media/
 # Arquivos estáticos
 staticfiles/
 
-# Arquivos de configuração
-.env
-
 # Arquivos de dependências gerados pelo pip
 pip-log.txt
 
